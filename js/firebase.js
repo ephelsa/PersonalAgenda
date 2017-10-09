@@ -12,16 +12,13 @@ firebase.initializeApp(config);
 
 var USER;
 
-
-console.log(location);
-
 firebase.auth().onAuthStateChanged(firebaseUser => {
 	const INDEX_HREF = "file:///home/ephelsa/Documentos/Estructura/PersonalAgenda/pages/index.html";
 	const ONLINE_HREF = "https://ephelsa.github.io/PersonalAgenda/pages/index.html";
 
   USER = firebaseUser;
 
-	if(!firebaseUser) //&& (location.href != INDEX_HREF || location.href != ONLINE_HREF)) {
+	if(!firebaseUser && (location.href != INDEX_HREF || location.href != ONLINE_HREF)) {
 		//location.href = "index.html";
 	}
 });
