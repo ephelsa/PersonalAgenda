@@ -9,14 +9,18 @@ btn_create.addEventListener('click', e => {
 
 	const dbRef = firebase.database().ref();
 
-	dbRef.child(USER.uid).child(time).child('title').set(note_title.value);
-	dbRef.child(USER.uid).child(time).child('content').set(note_content.value);
-	dbRef.child(USER.uid).child(time).child('order').set(time);
+	if (note_title.value != "" || note_content.value != "") {
+		dbRef.child(USER.uid).child(time).child('title').set(note_title.value);
+		dbRef.child(USER.uid).child(time).child('content').set(note_content.value);
+		dbRef.child(USER.uid).child(time).child('order').set(time);
 
-	dbRef.on('child_added', snap => {
-		successAlert("Note added.")
+		dbRef.on('child_added', snap => {
+			successAlert("Note added.")
 
-		note_title.value = "";
-		note_content.value = "";
-	});
+			note_title.value = "";
+			note_content.value = "";
+		});
+	} else {
+		errorAlert("Please, fill the fields before create.");
+	}
 });
