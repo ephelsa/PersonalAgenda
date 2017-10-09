@@ -22,7 +22,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
   USER = firebaseUser;
 
 	if(!firebaseUser) //&& (location.href != INDEX_HREF || location.href != ONLINE_HREF)) {
-		location.href = "index.html";
+		//location.href = "index.html";
 	}
 });
 
