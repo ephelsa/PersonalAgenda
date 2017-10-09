@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notas</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	
+	<link rel="stylesheet" type="text/css" href="../css/menu/navmenu.css">
+	<link rel="stylesheet" type="text/css" href="../css/notas/notes.css">
+
+
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+	
+</head>	
+
+<body>	
+	<div class="note-container manager-container">
+		<textarea class="note-title manager" placeholder="Note Title" id="note-title"></textarea>
+
+		<textarea class="manager" style="height: 60%" placeholder="Content" id="note-content"></textarea>
+
+		<button class="content" id="btn-create">Create</button>	
+	</div>
+
+	<script src="../js/firebase.js"></script>
+	<script src="../js/page-controller.js"></script>
+	<script src="../js/note/creator.js"></script>
+</body>
+</html>
