@@ -1,7 +1,6 @@
 function newNote(title, content) {
 	const time = new Date().getTime();
 
-	console.log(title + " " + content);
 	// Create the elements
 	const note_container = document.createElement('DIV');
 	const badge_container = document.createElement('DIV');

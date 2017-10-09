@@ -28,7 +28,7 @@ const btnLogout = document.getElementById('btnLogout');
 
 
 // Home
-btnHome.href = "notas.html";
+btnHome.href = "notes.html";
 
 // Note manager
 btnNoteMan.href = "note_manager.html";

@@ -11,6 +11,12 @@ btn_create.addEventListener('click', e => {
 
 	dbRef.child(USER.uid).child(time).child('title').set(note_title.value);
 	dbRef.child(USER.uid).child(time).child('content').set(note_content.value);
+	dbRef.child(USER.uid).child(time).child('order').set(time);
 
-	dbRef.on('child_added', snap => { alert("Note added"); })
+	dbRef.on('child_added', snap => {
+		successAlert("Note added.")
+
+		note_title.value = "";
+		note_content.value = "";
+	});
 });
