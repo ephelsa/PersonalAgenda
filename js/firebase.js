@@ -14,7 +14,7 @@ var USER;
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
 	const INDEX_HREF = "file:///home/ephelsa/Documentos/Estructura/PersonalAgenda/pages/index.html";
-	const ONLINE_HREF = "...";
+	const ONLINE_HREF = "https://ephelsa.github.io/PersonalAgenda/pages/index.html";
 
   USER = firebaseUser;
 
