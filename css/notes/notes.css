@@ -1,6 +1,86 @@
 @import url(../app.css);
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:400,700');
 
+button.modal {
+	display: inline;
+
+	float: right;
+
+	position: relative;
+
+	margin-right: 5%;
+	margin-top: 10%;
+}
+
+.input-select {
+	margin: 0px auto;
+
+	width: 50%;
+	height: 40px;
+
+	overflow: auto;
+
+	color: white;
+
+	display: block;
+}
+
+.input-select::placeholder {
+	color: white;
+}
+
+#container-select {
+	visibility: hidden;
+
+	padding: 20px;
+
+	width: 40%;
+	height: 40%;
+
+	position: absolute;
+
+	border-radius: 2px;
+
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin: auto;
+
+	background-color: rgba(24, 24, 24, 0.6);
+
+	z-index: 50;
+
+	transition: all 1s;
+}
+
+select {
+	width: 50%;
+	height: 36px;
+
+	padding: 8px;
+
+	margin: 20px auto;
+
+	background: rgba(0, 0, 0, 0.2);
+
+	color: white;
+
+	border: none;
+	border-radius: 2px;
+
+	display: block;
+}
+
+select:hover { background: rgba(0, 0, 0, 0.6); }
+
+option { font-size: 14px; }
+
+option:hover { background-color: rgba(108, 188, 16, 0.9); }
+
 .note-menu {
 	cursor: pointer;
 

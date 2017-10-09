@@ -69,7 +69,22 @@ function newNote(title, content, time) {
 
 
 	add.onclick = function() {
-		addBadge("new", "Proof", time);
+		const div = document.getElementById("container-select");
+
+		div.style.visibility = "visible";
+
+		const badge_input = document.getElementById("input-modal");
+		const create_btn = document.getElementById("create-btn-modal");
+		const cancel_btn = document.getElementById("cancel-btn-modal")
+
+		create_btn.onclick = function() {
+			addBadge("new", badge_input.value, time);
+		};
+
+		cancel_btn.onclick = function () {
+			badge_input.value = "";
+			div.style.visibility = "hidden";
+		};
 	}
 }
 
