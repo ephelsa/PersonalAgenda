@@ -61,9 +61,10 @@ function newNote(title, content, time) {
         div.style.opacity = "0";
         setTimeout(function(){ div.style.display = "none"; }, 600);
 
-        dbRef.child(USER.uid).child(time).child('title').set(null);
-        dbRef.child(USER.uid).child(time).child('content').set(null);
-        dbRef.child(USER.uid).child(time).child('order').set(null);
+
+        dbRef.child(USER.uid).child(time).on('child_added', snap => {
+        	dbRef.child(USER.uid).child(time).child(snap.key).set(null);
+        });
 	}
 
 

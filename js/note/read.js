@@ -19,7 +19,6 @@ dbRef.on('child_added', user => {
 					order = snap.val();
 				
 				} else {
-					console.log(snap.key);
 					data[snap.key] = snap.val();
 				}
 

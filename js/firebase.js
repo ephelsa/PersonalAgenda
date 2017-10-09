@@ -10,8 +10,6 @@ var config = {
 
 firebase.initializeApp(config);
 
-console.log(location.href);
-
 var USER;
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
