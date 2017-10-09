@@ -29,9 +29,8 @@ function createAlert(title, alert, type) {
 
 	// Adding close events
 	var close = document.getElementsByClassName("close-alert");
-	var i;
 
-	for (i = 0; i < close.length; i++) {
+	for (var i = 0; i < close.length; i++) {
 	    close[i].onclick = function(){
 	        var div = this.parentElement;
 	        div.style.opacity = "0";

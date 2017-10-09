@@ -8,7 +8,7 @@
 	<meta name="msapplication-tap-highlight" content="no">
 	
 	<link rel="stylesheet" type="text/css" href="../css/notes/notes.css">
-
+	<link rel="stylesheet" type="text/css" href="../css/loader/loader.css">
 
 	<!-- Firebase -->
 	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
@@ -16,8 +16,18 @@
 </head>	
 
 <body>
+	<div id="container-loader">
+		<div id="loader-out">
+			<div id="loader-in"></div>
+		</div>
+	</div>
 
 	<div class="note-container">
+		<div class="note-menu">
+			<span>&times;</span>
+			<span>+</span>
+		</div>
+
 		<div class="badge-container">
 			<span class="badge">New</span>
 			<span class="badge badge-urgent">Urgent</span>
@@ -34,7 +44,7 @@
 		<label class="note-title">
 			Title 
 		</label>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		<p class="note-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -42,6 +52,7 @@
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 	
+	<script src="../js/loader/loader.js"></script>
 	<script src="../js/firebase.js"></script>
 	<script src="../js/page-controller.js"></script>
 	<script src="../js/note/design.js""></script>

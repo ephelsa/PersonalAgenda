@@ -15,13 +15,13 @@ console.log(location.href);
 var USER;
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
-	const INDEX_HREF = "file:///home/leonardo/Documentos/Estructura/PersonalAgenda/pages/index.html";
+	const INDEX_HREF = "file:///home/leonardo/Documentos/Estructura/PersonalAgenda/pages/login.html";
 	const ONLINE_HREF = "https://ephelsa.github.io/PersonalAgenda/pages/index.html";
 
   USER = firebaseUser;
 
 	if(!firebaseUser && (location.href != INDEX_HREF )) {
-		location.href = "index.html";
+		location.href = "login.html";
 	}
 });
 

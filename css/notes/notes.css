@@ -1,9 +1,32 @@
 @import url(../app.css);
-
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:400,700');
 
-* {
+.note-menu {
+	cursor: pointer;
 
+	padding: 0 6px;
+
+	border-radius: 2px;
+
+	color: black;
+
+	visibility: hidden;
+	opacity: 0;
+
+	position: absolute;
+
+	transition: all 0.3s;
+}
+
+.note-menu span {
+	margin: 2px;
+}
+
+.note-container:hover .note-menu {
+	visibility: visible;
+	opacity: 1;
+
+	transform: rotate(360deg);
 }
 
 .note-container {
@@ -11,8 +34,6 @@
 
 	width: 20%;
 	height: 200px;
-
-	padding: 20px 30px;
 
 	border-radius: 2px;
 
@@ -34,17 +55,35 @@
 	width: 0px;
 }
 
-.note-container:hover {
-	padding: 25px 35px;
-}
-
 .note-title {
 	font-size: 20px;
 	font-weight: bold;
+
+	padding: 20px 30px;
+}
+
+.note-content {
+	padding: 0px 30px;
+	padding-bottom: 20px;
 }
 
 /* ------ Note Manager -----*/
 .manager-container {
+	width: 20%;
+	height: 200px;
+
+	border-radius: 2px;
+
+	background-color: rgba(250, 250, 250, 0.9);
+
+	overflow: scroll;
+
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.7);
+
+	z-index: 1;
+
+	transition: 0.3s;
+
 	position: absolute;
 
 	margin: auto;
@@ -53,9 +92,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-}
 
-.manager-container:hover {
 	padding: 20px 30px;
 }
 
@@ -69,14 +106,25 @@
 	border-style: none;
 }
 
+.manager-container::-webkit-scrollbar {
+	width: 0px;
+}
+
 .manager::-webkit-scrollbar {
 	width: 0px;
+}
+
+.manager.manager-title {
+	font-size: 20px;
+	font-weight: bold;
 }
 
 /* ------ Badges ------- */
 
 .badge-container {
 	margin-bottom: 20px;
+	padding: 0 30px;
+	padding-top: 20px;
 }
 
 .badge {
