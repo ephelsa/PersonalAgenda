@@ -54,7 +54,7 @@ button.modal {
 
 	z-index: 50;
 
-	transition: all 1s;
+	transition: all 0.3s;
 }
 
 select {
