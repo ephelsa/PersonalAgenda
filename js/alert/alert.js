@@ -40,9 +40,13 @@ function createAlert(title, alert, type) {
 }
 
 function successAlert(alert) {
-	createAlert("Success! ", alert, "success");
+	createAlert("Success: ", alert, "success");
 }
 
 function errorAlert(alert) {
-	createAlert("Error! ", alert, "error");
+	createAlert("Error: ", alert, "error");
+}
+
+function infoAlert(alert) {
+	createAlert("Information: ", alert, "info")
 }

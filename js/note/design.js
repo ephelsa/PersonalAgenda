@@ -55,7 +55,6 @@ function newNote(title, content, time) {
 	var close = document.getElementById("menu-close-" + time);
 	var add = document.getElementById("badge-add-" + time);
 
-
     close.onclick = function() {
         var div = this.parentElement.parentElement;
         div.style.opacity = "0";
@@ -69,21 +68,48 @@ function newNote(title, content, time) {
 
 
 	add.onclick = function() {
-		const div = document.getElementById("container-select");
+		const options = ["new", "urgent", "done", "reminder", "tag", 
+						"priority", "emergency", "doing"];
 
-		div.style.visibility = "visible";
+
+		const div = document.getElementById("container-select");
+		const select = document.getElementById("badge-select");
 
 		const badge_input = document.getElementById("input-modal");
 		const create_btn = document.getElementById("create-btn-modal");
 		const cancel_btn = document.getElementById("cancel-btn-modal")
 
+		div.style.visibility = "visible";
+		div.style.opacity = "1";
+
+		for (i in options) {
+			const option = document.createElement('OPTION');
+
+			option.text = options[i];
+
+			select.add(option);
+		}
+
 		create_btn.onclick = function() {
-			addBadge("new", badge_input.value, time);
+			const selected = select.selectedIndex;
+
+			const description = badge_input.value;
+
+			if (description != "") {
+				addBadge(options[selected], description, time);
+			} else {
+				infoAlert("Fill the description");
+			}
+		
+			badge_input.value = "";
 		};
 
 		cancel_btn.onclick = function () {
 			badge_input.value = "";
+			div.style.opacity = "0";
 			div.style.visibility = "hidden";
+
+			window.location.reload();
 		};
 	}
 }

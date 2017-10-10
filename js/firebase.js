@@ -12,8 +12,11 @@ firebase.initializeApp(config);
 
 var USER;
 
+
+console.log(window.location);
+
 firebase.auth().onAuthStateChanged(firebaseUser => {
-	const INDEX_HREF = "file:///home/leonardo/Documentos/Estructura/PersonalAgenda/pages/login.html";
+	const INDEX_HREF = "file:///home/ephelsa/Documentos/Estructura/PersonalAgenda/pages/login.html";
 	const ONLINE_HREF = "https://ephelsa.github.io/PersonalAgenda/pages/index.html";
 
   USER = firebaseUser;

@@ -15,12 +15,12 @@ btn_create.addEventListener('click', e => {
 		dbRef.child(USER.uid).child(time).child('order').set(time);
 
 		dbRef.on('child_added', snap => {
-			successAlert("Note added.")
-
 			note_title.value = "";
 			note_content.value = "";
 		});
+
+		successAlert("Note added.")
 	} else {
-		errorAlert("Please, fill the fields before create.");
+		infoAlert("Please, fill the fields before create.");
 	}
 });

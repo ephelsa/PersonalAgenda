@@ -1,7 +1,15 @@
 .alert {
-	padding: 20px;
+	width: 60%;
 
-	margin: 20px 20%;
+	position: absolute;
+
+	top: 0;
+	right: 0;
+	left: 0;
+
+	margin: 2% auto;
+
+	padding: 20px;
 
 	background-color: #f44336;
 
@@ -20,8 +28,6 @@
 	border-radius: 2px;
 }
 
-.alert.success { background-color: rgb(108, 188, 16); }
-.alert.error {background-color: rgb(255, 63, 0); }
 
 .close-alert {
 	margin-left: 15px;
@@ -44,3 +50,7 @@
 
 	color: rgba(24, 24, 24, 0.9);
 }
+
+.alert.success { background-color: rgb(108, 188, 16); }
+.alert.error { background-color: rgb(255, 63, 0); }
+.alert.info { background-color: rgb(114, 205, 255); }
