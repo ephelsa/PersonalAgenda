@@ -1,3 +1,6 @@
+// Web page: https://ephelsa.github.io/PersonalAgenda/pages/login.html
+
+
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyAZ0Ht1BvA7pT8Ba1UC6ttYRbPHspXrs_Y",
@@ -19,7 +22,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 	const INDEX_PATH = "/home/ephelsa/Documentos/Estructura/PersonalAgenda/pages/note_manager.htm";
 	const ONLINE_PATH = "/PersonalAgenda/pages/login.htmL";
 
-  console.log(!firebaseUser && (location.pathname != ONLINE_PATH || location.pathname != INDEX_PATH));
+  console.log(location.pathname != ONLINE_PATH || location.pathname != INDEX_PATH);
 
   USER = firebaseUser;
 
