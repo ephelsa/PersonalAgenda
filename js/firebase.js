@@ -22,7 +22,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 	const INDEX_PATH = "/home/ephelsa/Documentos/Estructura/PersonalAgenda/pages/note_manager.htm";
 	const ONLINE_PATH = "/PersonalAgenda/pages/login.html";
 
-  console.log(location.pathname != ONLINE_PATH || location.pathname != INDEX_PATH);
+  console.log(ONLINE_PATH + "    " + window.location.pathname);
 
   USER = firebaseUser;
 
