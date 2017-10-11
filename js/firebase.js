@@ -16,13 +16,9 @@ firebase.initializeApp(config);
 var USER;
 
 
-console.log(window.location);
-
 firebase.auth().onAuthStateChanged(firebaseUser => {
 	const INDEX_PATH = "/home/ephelsa/Documentos/Estructura/PersonalAgenda/pages/login.html";
 	const ONLINE_PATH = "/PersonalAgenda/pages/login.html";
-
-  console.log(ONLINE_PATH == window.location.pathname);
 
   USER = firebaseUser;
 
